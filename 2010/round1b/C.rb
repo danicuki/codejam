@@ -17,9 +17,14 @@ def nlai
 	nla.map {|x| x.to_i}
 end
 
+def fib(n)
+  n < 2 ? n : fib(n-1) + fib(n-2)
+end
+
 cases = nli
 (1..cases).each do |c|		
 ############ END OF COMMON STUFF
-
-  puts "Case ##{c}: #{c}"
+	resp = fib(nli) % 100003
+  puts "Case ##{c}: #{resp}"
 end
+
